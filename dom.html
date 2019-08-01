@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DOM</title>
+    <style>
+        .padder{
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" test="10" data-init="Hello world" bgColour="red">
         <h1>Test Dom</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eaque aliquid vitae quisquam atque dolor recusandae laborum facere quaerat numquam?</p>
     </div>
@@ -28,7 +33,29 @@
         //Selecting a particular item
 
         //Query Selector selects the first item that matches
-        var container = document.querySelector(".container:nth-child(2)")
+        var container = document.querySelector(".container")
+        
+        container.style.backgroundColor = '#2f2f2f'
+        container.style.color = '#fff'
+        //Adding class to the element
+        container.classList.add('padder')
+        // console.log(container.classList)
+
+        //Fetching the attribute
+
+        //Pass the name of the attribute to be fetched
+        container.getAttribute('test')
+        //To add a new attribute to the element
+        container.setAttribute("data-key", "Value hold by the attribute")
+
+        container.style.background = container.getAttribute('bgColour') 
+
+
+        // Firing any functinality after certain time
+
+        setTimeout(function(){
+            console.log("Hello WOrld")
+        }, 2000)
 
         //document.getElementsByClassName('container')
         //document.getElementById('')//Selection via ID

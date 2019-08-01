@@ -20,7 +20,7 @@
     <div class="container">
         <h3>Hell World</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quasi dicta aspernatur quibusdam minima molestias molestiae, quis excepturi totam eligendi? Ad, minima corrupti praesentium, architecto laborum incidunt recusandae necessitatibus rem inventore sequi dicta porro culpa quidem in labore nobis cupiditate!</p>
-        <button>Click Here</button>
+        <button onclick="alert()">Click Here</button>
     </div>
 
     <script>
@@ -60,6 +60,20 @@
         //document.getElementsByClassName('container')
         //document.getElementById('')//Selection via ID
         var containers = document.querySelectorAll(".container")
+
+
+        function alert(){
+            console.log("Hello World I've been clicked")
+        }
+
+        //Math.random() -> generates a random number between 0 & 1
+        // Math.round() -> rounds off a number
+        // Math.ceil() -> converts the number into higher round off number
+        // Math.floor() -> converts the number into lower round off number
+
+        //To generate random numbers and round off
+
+        //Math.round(Math.random() * RAND_LIMIT_NO ) -> replace RAND_LIMIT_NO with your number
     </script>
 </body>
 </html>

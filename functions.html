@@ -7,6 +7,10 @@
     <title>Function</title>
 </head>
 <body>
+
+    <div id="timer">
+
+    </div>
     <script>
 
         function sum(a,b,c,d,e,f){
@@ -36,11 +40,23 @@
         }
 
         var changeBg = ()=>{
-            document.body.style.backgroundColor = 'blue'
+            document.body.style.backgroundColor = '#ededed'
         }
 
 
+
+
         setTimeout(changeBg, 500)
+
+
+        //To place data into timer
+        document.querySelector("#timer").innerText = 10
+        
+        //Run the code contineously on interval of time
+        setInterval(()=>{
+            console.log("Hello World")
+        }, 2000)
+
 
 
         var test = [1,2,3,4];

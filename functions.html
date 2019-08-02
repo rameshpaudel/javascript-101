@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+
+        function sum(a,b,c,d,e,f){
+            return a + b + c + d+ e +f
+        }
+
+        var division = function(a,b){
+            return a / b
+        }
+
+        function checkIfArray(data){
+            if(Array.isArray(data)){
+                return true
+            }
+            return false;
+        }
+
+        var checkIfArray = (data) =>{
+            if(Array.isArray(data)){
+                return true
+            }
+            return false;
+        }
+        
+        var arr = (param)=>{
+            alert(param)
+        }
+
+        var changeBg = ()=>{
+            document.body.style.backgroundColor = 'blue'
+        }
+
+
+        setTimeout(changeBg, 500)
+
+
+        var test = [1,2,3,4];
+
+
+        var obj = {
+            sum: 10
+        }
+
+        console.log(sum(1,2,3,4,5,6,7))
+    
+    </script>
+</body>
+</html>

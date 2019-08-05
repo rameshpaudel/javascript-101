@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        .container{
+            padding: 10px;
+            transition: all 0.4s linear;
+        }
+        .padder {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Test Dom</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eaque aliquid vitae quisquam atque dolor
+            recusandae laborum facere quaerat numquam?</p>
+        <button>Click Here</button>
+    </div>
+
+    <div class="container">
+        <h1>Another div</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eaque aliquid vitae quisquam atque dolor
+            recusandae laborum facere quaerat numquam?</p>
+        <button>Click Here</button>
+    </div>
+
+    <div class="container">
+        <h3>Hell World</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam quasi dicta aspernatur quibusdam minima
+            molestias molestiae, quis excepturi totam eligendi? Ad, minima corrupti praesentium, architecto laborum
+            incidunt recusandae necessitatibus rem inventore sequi dicta porro culpa quidem in labore nobis cupiditate!
+        </p>
+        <button>Click Here</button>
+    </div>
+
+    <script>
+        var container = document.querySelectorAll('.container button');
+
+        function randomNumber(maxValue) {
+            return Math.round(Math.random() * maxValue);
+        }
+
+
+        function randomColorGenerator() {
+            return `rgb(${randomNumber(255)} , ${randomNumber(255)} ,${randomNumber(255)})`;
+
+        }
+        function changeParentBg(event) {
+            var theContainer = event.srcElement.parentElement
+            theContainer.classList.toggle("padder")
+            theContainer.style.backgroundColor = randomColorGenerator()
+        }
+
+        for (let i = 0; i < container.length; i++) {
+            container[i].addEventListener('click', changeParentBg)
+        }
+
+
+    </script>
+</body>
+
+</html>

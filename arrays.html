@@ -10,11 +10,14 @@
     <script>
         var testArr = [1,2,3,4,5,7,8,11,23,44,55];
 
-        for(let i =0; i < testArr.length; i++){
-            if(testArr[i] % 2 === 1){
-                console.log(testArr[i])
-            }
-        }
+        // var emArr = testArr.fill(9);
+
+        //To get the sum
+
+        var sumOfNos = testArr.reduce(function(preNum, currentNumber){
+            // debugger;
+            return preNum + currentNumber;  
+        })
 
         
         var filteredData = testArr.filter(function(value, index){
@@ -31,6 +34,55 @@
             //If the digits are more than 3 characters long 
             if(value.length > 3) return true
         })
+
+
+        var numbers = [1,2,3,4,5,6,7,8];
+
+
+        var mappedData = numbers.map(function(value,index){
+            return value * 5;
+        })
+        
+
+
+        var product1 = {
+            name: "Bag",
+            price: 300
+        }
+        var product2 = {
+            name: "Book",
+            price: 400
+        }
+        var product3 = {
+            name: "Shoe",
+            price: 4000
+        }
+
+        var productList = [product1, product2, product3]
+
+        //Output the products which costs less than 500 
+        var filteredProducts = productList.filter(function(value,index){
+            if(value.price < 500){
+                return true
+            }
+        })
+
+
+
+        var string = "The lazy fox quickly jumped over the brown dog."
+        //Converts string to array
+        var stringArr = string.split(" ");
+        //Converts array to string
+        var joinedString = stringArr.join("-");
+
+        //Checks if the condition matches every element found in the array
+        var eSt = stringArr.every(function(value,index){
+            // debugger;
+            if(value.length > 2){
+                return true
+            }
+        })
+        
 
     </script>
 </body>

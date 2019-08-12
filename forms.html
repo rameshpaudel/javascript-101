@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms and Datas</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    <form action="#" method="POST">
+        <div class="column">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="Test User">
+        </div>
+        <div class="column">
+            <label for="age">Age</label>
+            <input type="text" name="age" id="age">
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    <script>
+        var theForm = document.querySelector('form');
+        theForm.addEventListener('submit', function(e){
+            e.preventDefault();
+            var fields = e.srcElement;
+            console.log(e);
+            let name = fields[0].value;
+            let age = fields[1].value;
+            console.log(`The name is ${name} and the age is ${age}`)
+        })
+    </script>
+</body>
+</html>
